@@ -14,7 +14,7 @@ public final class ServicePagination: ServicePaginationProtocol {
     public private(set) var skip: Int
     public private(set) var total: Int
 
-    init(take: Int, skip: Int, total: Int) {
+    public init(take: Int, skip: Int, total: Int) {
         
         self.take = take
         self.skip = skip

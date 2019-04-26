@@ -12,7 +12,7 @@ public class ServiceManager<T: Decodable> {
     
     private let service: ServiceProtocol
     
-    init(service: ServiceProtocol) {
+    public init(service: ServiceProtocol) {
         
         self.service = service
     }

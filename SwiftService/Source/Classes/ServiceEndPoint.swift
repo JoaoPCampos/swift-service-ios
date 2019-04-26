@@ -10,12 +10,15 @@ import Foundation
 
 public final class ServiceEndPoint {
     
-    let scheme: Request.Scheme
-    let baseUrl: String
-    let path: String
-    let key: String?
+    public let scheme: Request.Scheme
+    public let baseUrl: String
+    public let path: String
+    public let key: String?
     
-    init(scheme: Request.Scheme, baseUrl: String, path: String, key: String? = nil) {
+    public init(scheme: Request.Scheme,
+                baseUrl: String,
+                path: String,
+                key: String? = nil) {
         
         self.scheme = scheme
         self.baseUrl = baseUrl
