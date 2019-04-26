@@ -1,5 +1,5 @@
 //
-//  Http.swift
+//  Request.swift
 //  SwiftService
 //
 //  Created by João Campos on 26/04/2019.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-public enum Http {
+public enum Request {
     
-    enum Header: String {
+    public enum Header: String {
         
         case accept = "Accept"
         case accept_chartset = "Accept-Charset"
@@ -22,11 +22,17 @@ public enum Http {
         case range = "Range"
     }
     
-    enum Method: String {
+    public enum Method: String {
         
         case get
         case post
         case put
         case delete
+    }
+    
+    public enum Scheme: String {
+        
+        case http
+        case https
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ServiceError: Error {
+public final class ServiceError: Error {
     
     enum ErrorType: Int {
         case missing = 409

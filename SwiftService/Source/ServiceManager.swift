@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ServiceManager<T: Decodable> {
+public class ServiceManager<T: Decodable> {
     
     private let service: ServiceProtocol
     
@@ -19,7 +19,7 @@ class ServiceManager<T: Decodable> {
 }
 
 // MARK: - Public
-extension ServiceManager {
+public extension ServiceManager {
     
     func request(success: @escaping (T?) -> Void,
                  failure: @escaping (Error?) -> Void) {

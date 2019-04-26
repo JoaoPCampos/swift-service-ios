@@ -11,11 +11,13 @@
 		D80E184122729C5800801919 /* SwiftServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E184022729C5800801919 /* SwiftServiceTests.swift */; };
 		D80E184322729C5800801919 /* SwiftService.h in Headers */ = {isa = PBXBuildFile; fileRef = D80E183522729C5800801919 /* SwiftService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D80E184D22729CC800801919 /* SwiftService.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D80E184C22729CC800801919 /* SwiftService.podspec */; };
-		D80E185822729D3E00801919 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E185022729D3D00801919 /* Http.swift */; };
+		D80E185822729D3E00801919 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E185022729D3D00801919 /* Request.swift */; };
 		D80E185922729D3E00801919 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E185122729D3D00801919 /* ServiceManager.swift */; };
 		D80E185A22729D3E00801919 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E185322729D3D00801919 /* ServiceError.swift */; };
 		D80E185B22729D3E00801919 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E185522729D3D00801919 /* ServiceProtocol.swift */; };
-		D80E185C22729D3E00801919 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E185722729D3D00801919 /* Header.swift */; };
+		D80E18FD2273152000801919 /* ServiceEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E18FC2273152000801919 /* ServiceEndPoint.swift */; };
+		D80E1902227317FA00801919 /* ServicePagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E1901227317FA00801919 /* ServicePagination.swift */; };
+		D80E19042273183900801919 /* ServicePaginationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E19032273183900801919 /* ServicePaginationProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +37,14 @@
 		D80E183B22729C5800801919 /* SwiftServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80E184022729C5800801919 /* SwiftServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftServiceTests.swift; sourceTree = "<group>"; };
 		D80E184222729C5800801919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D80E184C22729CC800801919 /* SwiftService.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftService.podspec; sourceTree = "<group>"; };
-		D80E185022729D3D00801919 /* Http.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
+		D80E184C22729CC800801919 /* SwiftService.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SwiftService.podspec; path = ../SwiftService.podspec; sourceTree = "<group>"; };
+		D80E185022729D3D00801919 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		D80E185122729D3D00801919 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		D80E185322729D3D00801919 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		D80E185522729D3D00801919 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
-		D80E185722729D3D00801919 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		D80E18FC2273152000801919 /* ServiceEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEndPoint.swift; sourceTree = "<group>"; };
+		D80E1901227317FA00801919 /* ServicePagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePagination.swift; sourceTree = "<group>"; };
+		D80E19032273183900801919 /* ServicePaginationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePaginationProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +107,9 @@
 		D80E184E22729D1B00801919 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D80E1900227317EE00801919 /* Models */,
 				D80E185222729D3D00801919 /* Classes */,
 				D80E184F22729D3D00801919 /* Enums */,
-				D80E185622729D3D00801919 /* Models */,
 				D80E185422729D3D00801919 /* Protocols */,
 				D80E185122729D3D00801919 /* ServiceManager.swift */,
 			);
@@ -115,7 +119,7 @@
 		D80E184F22729D3D00801919 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				D80E185022729D3D00801919 /* Http.swift */,
+				D80E185022729D3D00801919 /* Request.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -124,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				D80E185322729D3D00801919 /* ServiceError.swift */,
+				D80E18FC2273152000801919 /* ServiceEndPoint.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -132,14 +137,15 @@
 			isa = PBXGroup;
 			children = (
 				D80E185522729D3D00801919 /* ServiceProtocol.swift */,
+				D80E19032273183900801919 /* ServicePaginationProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		D80E185622729D3D00801919 /* Models */ = {
+		D80E1900227317EE00801919 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D80E185722729D3D00801919 /* Header.swift */,
+				D80E1901227317FA00801919 /* ServicePagination.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,11 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D80E185C22729D3E00801919 /* Header.swift in Sources */,
 				D80E185A22729D3E00801919 /* ServiceError.swift in Sources */,
-				D80E185822729D3E00801919 /* Http.swift in Sources */,
+				D80E185822729D3E00801919 /* Request.swift in Sources */,
+				D80E19042273183900801919 /* ServicePaginationProtocol.swift in Sources */,
 				D80E185922729D3E00801919 /* ServiceManager.swift in Sources */,
 				D80E185B22729D3E00801919 /* ServiceProtocol.swift in Sources */,
+				D80E18FD2273152000801919 /* ServiceEndPoint.swift in Sources */,
+				D80E1902227317FA00801919 /* ServicePagination.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
