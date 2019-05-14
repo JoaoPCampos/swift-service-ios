@@ -14,11 +14,3 @@ public protocol ServiceProtocol {
     var parameters: [URLQueryItem]? { get }
     var headers: [(key: Request.Header, value: String)] { get }
 }
-
-public extension ServiceProtocol {
-    
-    func urlPath(for endpoint: ServiceEndPoint) -> String {
-        
-        return endpoint.scheme.rawValue + "://" + endpoint.baseUrl + endpoint.path
-    }
-}
