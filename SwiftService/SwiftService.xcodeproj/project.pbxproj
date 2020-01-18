@@ -15,7 +15,7 @@
 		D80E185922729D3E00801919 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E185122729D3D00801919 /* ServiceManager.swift */; };
 		D80E185A22729D3E00801919 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E185322729D3D00801919 /* ServiceError.swift */; };
 		D80E185B22729D3E00801919 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E185522729D3D00801919 /* ServiceProtocol.swift */; };
-		D80E18FD2273152000801919 /* ServiceEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E18FC2273152000801919 /* ServiceEndPoint.swift */; };
+		D80E18FD2273152000801919 /* ServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E18FC2273152000801919 /* ServiceEndpoint.swift */; };
 		D80E1902227317FA00801919 /* ServicePagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E1901227317FA00801919 /* ServicePagination.swift */; };
 		D80E19042273183900801919 /* ServicePaginationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E19032273183900801919 /* ServicePaginationProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -42,7 +42,7 @@
 		D80E185122729D3D00801919 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		D80E185322729D3D00801919 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		D80E185522729D3D00801919 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
-		D80E18FC2273152000801919 /* ServiceEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEndPoint.swift; sourceTree = "<group>"; };
+		D80E18FC2273152000801919 /* ServiceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEndpoint.swift; sourceTree = "<group>"; };
 		D80E1901227317FA00801919 /* ServicePagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePagination.swift; sourceTree = "<group>"; };
 		D80E19032273183900801919 /* ServicePaginationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePaginationProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				D80E185322729D3D00801919 /* ServiceError.swift */,
-				D80E18FC2273152000801919 /* ServiceEndPoint.swift */,
+				D80E18FC2273152000801919 /* ServiceEndpoint.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -265,7 +265,7 @@
 				D80E19042273183900801919 /* ServicePaginationProtocol.swift in Sources */,
 				D80E185922729D3E00801919 /* ServiceManager.swift in Sources */,
 				D80E185B22729D3E00801919 /* ServiceProtocol.swift in Sources */,
-				D80E18FD2273152000801919 /* ServiceEndPoint.swift in Sources */,
+				D80E18FD2273152000801919 /* ServiceEndpoint.swift in Sources */,
 				D80E1902227317FA00801919 /* ServicePagination.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
