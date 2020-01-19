@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
 spec.name                   = "SwiftService"
-spec.version                = "0.1.0"
+spec.version                = "0.1.1"
 spec.summary                = "Swift Service is a helper tool for network requests"
 
 spec.homepage               = "https://github.com/JoaoPCampos"
