@@ -43,6 +43,7 @@ public extension ServiceManager {
         }
         
         request.httpMethod = self.service.method.rawValue.uppercased()
+        request.httpBody = self.service.endpoint.body
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
