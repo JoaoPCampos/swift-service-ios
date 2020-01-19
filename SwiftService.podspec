@@ -9,7 +9,7 @@ spec.license                = { :type => "MIT", :file => "LICENSE" }
 spec.author                 = { "Joao Campos" => "jonybfc@gmail.com" }
 
 spec.ios.deployment_target  = "10.0"
-spec.swift_version          = "4.0"
+spec.swift_version          = "5.1"
 spec.ios.framework          = 'UIKit'
 spec.platform               = :ios, "10.0"
 
