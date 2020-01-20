@@ -11,10 +11,12 @@ import Foundation
 public class ServiceManager<T: Decodable> {
     
     private let service: ServiceProtocol
+    private let log: Bool
     
-    public init(service: ServiceProtocol) {
+    public init(service: ServiceProtocol, log: Bool = false) {
         
         self.service = service
+        self.log = log
     }
 }
 
@@ -39,6 +41,8 @@ public extension ServiceManager {
         
         request.httpMethod = self.service.method.rawValue.uppercased()
         request.httpBody = self.service.endpoint.body
+        
+        self.debug()
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
@@ -93,5 +97,29 @@ private extension ServiceManager {
             
             return nil
         }
+    }
+    
+    private func debug() {
+        
+        guard self.log else { return }
+        
+        print("### URL PATH ###")
+        print(self.service.path)
+        
+        print("\n### PARAMETERS ###")
+        print(self.service.parameters ?? [])
+        
+        print("\n### HEADERS ###")
+        print(self.service.headers)
+        
+        print("\n### METHOD ###")
+        print(self.service.method.rawValue + "\n\n")
+        
+        guard let data = self.service.endpoint.body else { return }
+        
+        let json = try? JSONDecoder().decode(T.self, from: data)
+        
+        print("\n### BODY ###")
+        print(json.debugDescription + "\n\n")
     }
 }
