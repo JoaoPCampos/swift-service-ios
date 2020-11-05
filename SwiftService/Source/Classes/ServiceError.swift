@@ -20,23 +20,23 @@ public final class ServiceError: Error {
     
     // MARK: - Properties
     public let type: ErrorType
-    public let message: String
+    public let dictionary: [String: Any]
 
     public init() {
         
         self.type = .unknown
-        self.message = "No Message"
+        self.dictionary = [:]
     }
 
-    public init(type: ErrorType, message: String) {
+    public init(type: ErrorType, dictionary: [String: Any]) {
         
         self.type = type
-        self.message = message
+        self.dictionary = dictionary
     }
 
     public init(code: Int, dictionary: [String: Any]) {
         
         self.type = ErrorType.init(rawValue: code) ?? .unknown
-        self.message = (dictionary["message"] as? String) ?? "No Message"
+        self.dictionary = dictionary
     }
 }
