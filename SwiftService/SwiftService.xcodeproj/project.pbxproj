@@ -18,6 +18,8 @@
 		D80E18FD2273152000801919 /* ServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E18FC2273152000801919 /* ServiceEndpoint.swift */; };
 		D80E1902227317FA00801919 /* ServicePagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E1901227317FA00801919 /* ServicePagination.swift */; };
 		D80E19042273183900801919 /* ServicePaginationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E19032273183900801919 /* ServicePaginationProtocol.swift */; };
+		D8E6C2D125543D1F00024091 /* BaseStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E6C2D025543D1F00024091 /* BaseStatusCode.swift */; };
+		D8E6C2D32554433E00024091 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E6C2D22554433E00024091 /* StatusCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		D80E18FC2273152000801919 /* ServiceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEndpoint.swift; sourceTree = "<group>"; };
 		D80E1901227317FA00801919 /* ServicePagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePagination.swift; sourceTree = "<group>"; };
 		D80E19032273183900801919 /* ServicePaginationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePaginationProtocol.swift; sourceTree = "<group>"; };
+		D8E6C2D025543D1F00024091 /* BaseStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStatusCode.swift; sourceTree = "<group>"; };
+		D8E6C2D22554433E00024091 /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 			children = (
 				D80E185322729D3D00801919 /* ServiceError.swift */,
 				D80E18FC2273152000801919 /* ServiceEndpoint.swift */,
+				D8E6C2D025543D1F00024091 /* BaseStatusCode.swift */,
+				D8E6C2D22554433E00024091 /* StatusCode.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -262,6 +268,8 @@
 			files = (
 				D80E185A22729D3E00801919 /* ServiceError.swift in Sources */,
 				D80E185822729D3E00801919 /* Request.swift in Sources */,
+				D8E6C2D32554433E00024091 /* StatusCode.swift in Sources */,
+				D8E6C2D125543D1F00024091 /* BaseStatusCode.swift in Sources */,
 				D80E19042273183900801919 /* ServicePaginationProtocol.swift in Sources */,
 				D80E185922729D3E00801919 /* ServiceManager.swift in Sources */,
 				D80E185B22729D3E00801919 /* ServiceProtocol.swift in Sources */,

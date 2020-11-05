@@ -9,34 +9,19 @@ import Foundation
 
 public final class ServiceError: Error {
     
-    public enum ErrorType: Int {
-        
-        case missing = 409
-        case forbidden = 403
-        case not_allowed = 405
-        case invalid = 401
-        case unknown
-    }
-    
     // MARK: - Properties
-    public let type: ErrorType
     public let dictionary: [String: Any]
+    public let statusCode: StatusCode
 
     public init() {
         
-        self.type = .unknown
+        self.statusCode = StatusCode()
         self.dictionary = [:]
     }
 
-    public init(type: ErrorType, dictionary: [String: Any]) {
+    public init(statusCode: StatusCode, dictionary: [String: Any] = [:]) {
         
-        self.type = type
-        self.dictionary = dictionary
-    }
-
-    public init(code: Int, dictionary: [String: Any]) {
-        
-        self.type = ErrorType.init(rawValue: code) ?? .unknown
+        self.statusCode = statusCode
         self.dictionary = dictionary
     }
 }

@@ -24,7 +24,7 @@ public class ServiceManager<T: Decodable> {
 public extension ServiceManager {
     
     func request(success: @escaping (T?) -> Void,
-                 failure: @escaping (Error?) -> Void) {
+                 failure: @escaping (ServiceError?) -> Void) {
         
         guard var urlComponents = URLComponents(string: self.service.path) else { return }
         
@@ -48,7 +48,9 @@ public extension ServiceManager {
             
             guard let data = data, let httpStatus = response as? HTTPURLResponse, error == nil else {
                 
-                failure(error)
+                let description = error?.localizedDescription ?? "No error description found"
+                
+                failure(ServiceError(statusCode: StatusCode(customDescription: description)))
                 
                 return
             }
@@ -61,13 +63,14 @@ public extension ServiceManager {
                 
                 if let responseObject = (try? JSONSerialization.jsonObject(with: data)) as? [String: Any] {
                     
-                    let serviceError = ServiceError(code: httpStatus.statusCode, dictionary: responseObject)
+                    let serviceError = ServiceError(statusCode: StatusCode(httpStatus.statusCode),
+                                                    dictionary: responseObject)
                     
                     failure(serviceError)
                     
                 } else {
                     
-                    failure(ServiceError())
+                    failure(ServiceError(statusCode: StatusCode(customDescription: "JSONSerialization failed")))
                 }
             }
         }
