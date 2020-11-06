@@ -23,8 +23,8 @@ public class ServiceManager<T: Decodable> {
 // MARK: - Public
 public extension ServiceManager {
     
-    func request(success: @escaping (T?) -> Void,
-                 failure: @escaping (ServiceError?) -> Void) {
+    func request(success: @escaping (T) -> Void,
+                 failure: @escaping (ServiceError) -> Void) {
         
         guard var urlComponents = URLComponents(string: self.service.path) else { return }
         
@@ -55,9 +55,9 @@ public extension ServiceManager {
                 return
             }
             
-            if httpStatus.statusCode == 200 {
+            if httpStatus.statusCode == 200, let object: T = self.decode(data) {
                 
-                success(self.decode(data))
+                success(object)
                 
             } else {
                 
@@ -96,8 +96,7 @@ private extension ServiceManager {
         }
         catch {
             
-            print("Decode failed with error:\n\(error)")
-            
+            //print("Decode failed with error:\n\(error)")
             return nil
         }
     }
